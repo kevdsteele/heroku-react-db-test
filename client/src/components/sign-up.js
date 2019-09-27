@@ -80,15 +80,15 @@ render() {
 		<div className="card">
 			<img src="images/login-img.jpg" className="card-img-top login-img" alt="login" />
 			<div className="card-body">
-				<h5 className="card-title">Signup</h5>
-			<form className="">
+				<h5 className="card-title text-center">Signup</h5>
+			<form className="mt-3">
 				<div className="form-row">
 				<div className="form-group col-6">
 					<div className="">
 						<label className="form-label text-left" htmlFor="username">First Name</label>
 					</div>
 					<div className="">
-						<input className="form-input"
+						<input className="form-input w-100"
 							type="text"
 							id="username"
 							name="firstName"
@@ -103,8 +103,8 @@ render() {
 					<div className="">
 						<label className="form-label" htmlFor="username">Last Name</label>
 					</div>
-					<div className="d-flex justify-content-end">
-						<input className="form-input "
+					<div className="">
+						<input className="form-input w-100 "
 							type="text"
 							id="username"
 							name="lastName"
@@ -122,7 +122,7 @@ render() {
 						<label className="form-label text-left" htmlFor="username">Email address</label>
 					</div>
 					<div className="">
-						<input className="form-input"
+						<input className="form-input w-100"
 							type="text"
 							id="username"
 							name="username"
@@ -139,7 +139,7 @@ render() {
 						<label className="form-label text-left" htmlFor="password">Password: </label>
 					</div>
 					<div className="">
-						<input className="form-input"
+						<input className="form-input w-100"
 							placeholder="password"
 							type="password"
 							name="password"

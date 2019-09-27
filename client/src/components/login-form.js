@@ -67,15 +67,15 @@ class LoginForm extends Component {
                 <div className="card">
                     <img src="images/login-img.jpg" className="card-img-top login-img" alt="login" />
                     <div className="card-body">
-                        <h5 className="card-title">Please Login</h5>
+                        <h5 className="card-title text-center">Please Login</h5>
 
-                    <form className="">
+                    <form className="mt-3">
                         <div className="form-group">
-                            <div className="">
+                            <div className="form-row">
                                 <label className="form-label text-left" htmlFor="username">Email address</label>
                             </div>
-                            <div className="">
-                                <input className="form-input"
+                            <div className="form-row">
+                                <input className="form-input w-100"
                                     type="email"
                                     id="username"
                                     name="username"
@@ -86,11 +86,11 @@ class LoginForm extends Component {
                             </div>
                         </div>
                         <div className="form-group">
-                            <div className="">
+                            <div className="form-row">
                                 <label className="form-label text-left" htmlFor="password">Password: </label>
                             </div>
-                            <div className="">
-                                <input className="form-input"
+                            <div className="form-row">
+                                <input className="form-input w-100"
                                     placeholder="password"
                                     type="password"
                                     name="password"
