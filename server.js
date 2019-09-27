@@ -54,7 +54,7 @@ app.use(function(req, res, next) {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect('mongodb://greenpoint_admin:Savetheworld19@ds229290.mlab.com:29290/heroku_70n39sz3' );
+mongoose.connect('mongodb://greenpoint_admin:Savetheworld19@ds051595.mlab.com:51595/heroku_m0nlvt7s' );
 
 // Start the API server
 app.listen(PORT, function() {
