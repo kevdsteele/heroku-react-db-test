@@ -73,7 +73,7 @@ class Navbar extends Component {
                                         Challenge
                                         </li>
                                     </Link>  
-                                    <Link to="/logout" className="nav-item nav-link">
+                                    <Link to="#" className="nav-item nav-link" onClick={this.logout}>
                                         <li className="nav-item">
                                         Logout
                                         </li>
