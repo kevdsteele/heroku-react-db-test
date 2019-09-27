@@ -35,45 +35,75 @@ class Navbar extends Component {
         return (
             <div>
 
-                <header className="navbar App-header" id="nav-container">
-                <div className="col-4 justify-content-start">
-                    <div id="top-filler"></div>
+                <div className="row App-header" id="nav-container">
+                    <div className="col-md-4 justify-content-start">
+                        <div id="top-filler"></div>
                         <img src={logo} className="App-logo" alt="logo" />
-                        
                     </div>
-                    <div className="col-4 text-center">
-                    <h1 className="App-title">Welcome to Green Point</h1>
+
+                    <div className="col-md-4 text-center pt-2 mt-4">
+                    <h1 className="App-title ">Welcome to Green Point</h1>
                     </div>
-                    <div className="col-4" >
+
+                    <div className="col-md-4" >
                         {loggedIn ? (
-                            <section className="navbar-section justify-content-end">
-                                <Link to="#" className="btn  btn-outline-success" >
+                            <section className="nav justify-content-end">
+                                <Link to="#" className="nav-item" >
                                 <span className="">learn</span></Link>
-                                <Link to="#" className="btn btn-outline-success" >
+                                <Link to="#" className="nav-item" >
                                 <span className="text-secondary">track</span></Link>
-                                <Link to="#" className="btn btn-outline-success" >
+                                <Link to="#" className="nav-item" >
                                 <span className="text-secondary">compete</span></Link>
-                                <Link to="#" className="btn btn-outline-success" onClick={this.logout}>
+                                <Link to="#" className="nav-item" onClick={this.logout}>
                                 <span className="">logout</span></Link>
                      
 
                             </section>
                         ) : (
-                                <section className="navbar-section justify-content-end">
-                                    <Link to="/" className="btn btn-outline-success">
-                                        <span className="">home</span>
-                                        </Link>
-                                    <Link to="/login" className="btn btn-outline-success">
-                                    <span className="">login</span>
-				</Link>
-                                    <Link to="/signup" className="btn btn-outline-success">
-                                    <span className="">sign up</span>
-				</Link>
-                                </section>
+
+
+<nav className="navbar navbar-expand-lg mt-3 text-white">
+  
+  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon"></span>
+  </button>
+  <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul className="navbar-nav justify-content-end">
+    <Link to="/" className="nav-item nav-link">
+                                        <li className="nav-item ">
+                                        Home
+                                        </li>
+                                    </Link>   
+
+                                     <Link to="/login" className="nav-item nav-link">
+                                        <li className="nav-item">
+                                       Login
+                                        </li>
+                                    </Link> 
+
+                                     <Link to="/signup" className="nav-item nav-link">
+                                        <li className="nav-item">
+                                        Signup
+                                        </li>
+                                    </Link>  
+    
+    </ul>
+  </div>
+</nav>
+
+
+                                // <nav className="navbar">
+                                //     <ul class="navbar-nav d-block justify-content-end">
+                                  
+                                  
+                                   
+                                //     </ul>
+
+                                // </nav>
                             )}
                     </div>
                     
-                </header>
+                </div>
             </div>
 
         );
