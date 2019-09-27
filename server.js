@@ -1,22 +1,60 @@
 const express = require("express");
-
+const bodyParser = require('body-parser')
+const morgan = require('morgan')
+const session = require('express-session')
 const mongoose = require("mongoose");
-const routes = require("./routes");
+const passport = require ("./passport")
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+const routes = require("./routes");
+
 // Define middleware here
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(morgan('dev'))
+app.use(
+	bodyParser.urlencoded({
+		extended: false
+	})
+)
+
+app.use(bodyParser.json())
+
 // Serve up static assets (usually on heroku)
+
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
+	app.use(express.static("client/build"))
+  }
+
+
+  // Sessions
+app.use(
+	session({
+		secret: 'keyboard cat', //pick a random string to make the hash that is generated secure
+
+		resave: true, //required
+		saveUninitialized: true//required
+	})
+)
+
+
+
+// Passport
+app.use(passport.initialize())
+app.use(passport.session()) // calls the deserializeUser
+
+//Express Messages 
+
+app.use(require("connect-flash")());
+app.use(function(req, res, next) {
+  res.locals.messages = require("express-messages")(req, res);
+  next();
+});
+
 // Add routes, both API and view
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI );
+mongoose.connect('mongodb://greenpoint_admin:Savetheworld19@ds229290.mlab.com:29290/heroku_70n39sz3' );
 
 // Start the API server
 app.listen(PORT, function() {
