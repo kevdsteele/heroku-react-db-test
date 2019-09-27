@@ -47,18 +47,54 @@ class Navbar extends Component {
 
                     <div className="col-md-4" >
                         {loggedIn ? (
-                            <section className="nav justify-content-end">
-                                <Link to="#" className="nav-item" >
-                                <span className="">learn</span></Link>
-                                <Link to="#" className="nav-item" >
-                                <span className="text-secondary">track</span></Link>
-                                <Link to="#" className="nav-item" >
-                                <span className="text-secondary">compete</span></Link>
-                                <Link to="#" className="nav-item" onClick={this.logout}>
-                                <span className="">logout</span></Link>
+
+
+<nav className="navbar navbar-expand-lg mt-3 text-white">
+  
+  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon"></span>
+  </button>
+  <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul className="navbar-nav justify-content-end">
+    <Link to="#" className="nav-item nav-link">
+                                        <li className="nav-item">
+                                       Learn
+                                        </li>
+                                    </Link>   
+
+                                     <Link to="#" className="nav-item nav-link">
+                                        <li className="nav-item">
+                                       Track
+                                        </li>
+                                    </Link> 
+
+                                     <Link to="#" className="nav-item nav-link">
+                                        <li className="nav-item">
+                                        Challenge
+                                        </li>
+                                    </Link>  
+                                    <Link to="/logout" className="nav-item nav-link">
+                                        <li className="nav-item">
+                                        Logout
+                                        </li>
+                                    </Link>  
+    
+    </ul>
+  </div>
+</nav>
+
+                            // <section className="nav justify-content-end">
+                            //     <Link to="#" className="nav-item" >
+                            //     <span className="">learn</span></Link>
+                            //     <Link to="#" className="nav-item" >
+                            //     <span className="text-secondary">track</span></Link>
+                            //     <Link to="#" className="nav-item" >
+                            //     <span className="text-secondary">compete</span></Link>
+                            //     <Link to="#" className="nav-item" onClick={this.logout}>
+                            //     <span className="">logout</span></Link>
                      
 
-                            </section>
+                            // </section>
                         ) : (
 
 
@@ -70,7 +106,7 @@ class Navbar extends Component {
   <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
     <ul className="navbar-nav justify-content-end">
     <Link to="/" className="nav-item nav-link">
-                                        <li className="nav-item ">
+                                        <li className="nav-item">
                                         Home
                                         </li>
                                     </Link>   
