@@ -37,10 +37,12 @@
 
 .card {
   width:500px;
-  margin-top:50px;
+  margin-top:25px;
   margin-left:auto;
   margin-right:auto;
 }
+
+
 
 .signup {
   height:330px
