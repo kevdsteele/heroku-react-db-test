@@ -11,6 +11,7 @@ const routes = require("./routes");
 
 // Define middleware here
 app.use(morgan('dev'))
+
 app.use(
 	bodyParser.urlencoded({
 		extended: false

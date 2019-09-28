@@ -66,7 +66,7 @@ class LoginForm extends Component {
   
                 <div className="card">
                     <img src="images/login-img.jpg" className="card-img-top login-img" alt="login" />
-                    <div className="card-body">
+                    <div className="card-body login">
                         <h5 className="card-title text-center">Please Login</h5>
 
                     <form className="mt-3">
