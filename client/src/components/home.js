@@ -10,8 +10,7 @@ class Home extends Component {
        
         return (
             <div className="col-12 text-center">
-               
-                <img className="home-image" src="images/gpback.png" alt="greenpoint tree" />
+               This is our site 
             </div>
         )
 

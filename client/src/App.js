@@ -60,7 +60,7 @@ class App extends Component {
         <Navbar updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
         {/* greet user if logged in: */}
         {this.state.loggedIn &&
-          <p className="text-center mt-3">Learn how you can make a difference, {this.state.firstName}!</p>
+          <p className="text-center mt-3">Welcome to the site, {this.state.firstName}!</p>
         }
         {/* Routes to different components */}
         <Route

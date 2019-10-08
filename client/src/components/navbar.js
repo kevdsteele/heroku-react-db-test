@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 //import { Redirect } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import logo from '../logo.svg';
+
 import '../App.css';
 import axios from 'axios'
 
@@ -38,11 +38,11 @@ class Navbar extends Component {
                 <div className="row App-header" id="nav-container">
                     <div className="col-md-4 justify-content-start">
                         <div id="top-filler"></div>
-                        <img src={logo} className="App-logo" alt="logo" />
+                        
                     </div>
 
                     <div className="col-md-4 text-center pt-2 mt-4">
-                    <h1 className="App-title ">Welcome to Green Point</h1>
+                    <h1 className="App-title ">Our Site </h1>
                     </div>
 
                     <div className="col-md-4" >
@@ -58,19 +58,19 @@ class Navbar extends Component {
     <ul className="navbar-nav justify-content-end">
     <Link to="#" className="nav-item nav-link">
                                         <li className="nav-item">
-                                       Learn
+                                      Nav Item 1
                                         </li>
                                     </Link>   
 
                                      <Link to="#" className="nav-item nav-link">
                                         <li className="nav-item">
-                                       Track
+                                       Nav Item 2
                                         </li>
                                     </Link> 
 
                                      <Link to="#" className="nav-item nav-link">
                                         <li className="nav-item">
-                                        Challenge
+                                        Nav Item 3
                                         </li>
                                     </Link>  
                                     <Link to="#" className="nav-item nav-link" onClick={this.logout}>

@@ -78,9 +78,9 @@ render() {
 		<div className="row">
   
 		<div className="card">
-			<img src="images/login-img.jpg" className="card-img-top login-img" alt="login" />
+			
 			<div className="card-body signup">
-				<h5 className="card-title text-center">Signup</h5>
+				<h5 className="card-title card-header text-center">Signup</h5>
 			<form className="mt-3">
 				<div className="form-row">
 				<div className="form-group col-6">
